@@ -5,16 +5,21 @@
     
 		<!-- CSS -->
     	<link href="frameworks/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-  
+		<link href="css/style.css" rel="stylesheet"> 
+ 
 		<!-- JAVASCRIPT -->
+		<script src="frameworks/jquery/jquery-2.0.2.min.js"></script>
 		<script src="frameworks/angular/angular.js"></script>
 		<script src="frameworks/angular/ui-bootstrap-0.3.0.min.js"></script>
 
 		<script src="js/app.js"></script>
+		<script src="js/controllers/login.js"></script>
 		<script src="js/controllers/main.js"></script>
 	</head>
   	<body ng-controller="MainCtrl">
-    	<h1>Hello, world!</h1>
-		<p>{{work}}</p>
+		<div ng-include="'partials/top-menu.html'"></div>
+		<div class="container span12">
+    		<div ng-view></div>
+		</div>
   	</body>
 </html>
